@@ -8,7 +8,8 @@ import {APP_ROUTING } from './app.routes';
 
 //servicios
 
-//import { HeroesService } from './servicios/heroes.service';
+import { HeroesService } from './components/servicios/heroes.service';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,7 +18,7 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { AboutComponent } from './components/about/about.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { HomeComponent } from './components/home/home.component';
-import { from } from 'rxjs';
+import { HeroeComponent } from './components/heroe/heroe.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { from } from 'rxjs';
     NavbarComponent,   
     AboutComponent,
     HeroesComponent,
-    HomeComponent
+    HomeComponent,
+    HeroeComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,8 @@ import { from } from 'rxjs';
     APP_ROUTING
   ],
   providers: [
- // HeroesService
+   HeroesService
+
 ],
   bootstrap: [AppComponent]
 })
